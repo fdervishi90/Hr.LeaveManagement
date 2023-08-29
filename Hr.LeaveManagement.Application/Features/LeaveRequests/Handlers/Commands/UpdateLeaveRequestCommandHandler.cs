@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Hr.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands;
-using Hr.LeaveManagement.Application.Persistence.Contracts;
+using Hr.LeaveManagement.Application.Contracts.Persistence;
 using MediatR;
 
 namespace Hr.LeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
@@ -21,9 +21,7 @@ namespace Hr.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
 
             // Update the Destination with what the source has
             _mapper.Map(request.LeaveRequestDto, leaveRequest);
-
             await _leaveRequestRepository.UpdateAsync(leaveRequest);
-
             return Unit.Value;
         }
     }

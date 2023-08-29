@@ -1,13 +1,8 @@
 ﻿using AutoMapper;
+using Hr.LeaveManagement.Application.Contracts.Persistence;
 using Hr.LeaveManagement.Application.DTOs.LeaveRequest;
 using Hr.LeaveManagement.Application.Features.LeaveRequests.Requests.Queries;
-using Hr.LeaveManagement.Application.Persistence.Contracts;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hr.LeaveManagement.Application.Features.LeaveRequests.Handlers.Queries
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hr.LeaveManagement.Application.Persistence.Contracts
+namespace Hr.LeaveManagement.Application.Contracts.Persistence
 {
     /// <summary>
     /// Generic Repository
@@ -15,11 +15,13 @@ namespace Hr.LeaveManagement.Application.Persistence.Contracts
         Task<T> GetAsync(int id);
 
         Task<IReadOnlyList<T>> GetAllAsync();
+        
+        Task<bool> Exists(int id);
 
         Task<T> AddAsync(T entity);
 
-        Task<T> UpdateAsync(T entity);
+        Task UpdateAsync(T entity);
 
-        Task<T> DeleteAsync(int id);
+        Task DeleteAsync(T id);
     }
 }
